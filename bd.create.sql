@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `User`
 (
     `U_id` SMALLINT NOT NULL AUTO_INCREMENT,
     `U_username` VARCHAR(30) NOT NULL,
-    `U_date_birthday` DATETIME NOT NULL,
+    `U_date_birthday` DATE NOT NULL,
     `U_mail` VARCHAR(100) NOT NULL ,
     `U_password` VARCHAR(255) NOT NULL,
     `U_number` INT(8) NOT NULL CHECK(`U_number` >= 0),

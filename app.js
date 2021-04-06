@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config({path : './configs/.env'});
-const connection= require('./configs/db.config')
+const connection= require('./configs/db.config');
 
 class App{
     constructor(port, connectionDB){
@@ -41,6 +41,11 @@ class App{
 
     initAllRoute(routes){
         this.app.use('/', routes);
+    }
+
+    initialiseMiddleware(){
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
     }
 }
 
